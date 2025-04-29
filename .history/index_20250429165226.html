@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanakamahalakshmi Katepalli | AI & Data Science Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #2C3E50;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: #ECF0F1;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        nav ul li a:hover {
+            color: #3498DB;
+        }
+
+        /* Home Section */
+        #home {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: url('images/background.jpg') no-repeat center center/cover;
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #home::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text contrast */
+            z-index: 0;
+        }
+
+        #home .content {
+            z-index: 1;
+            padding: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        #home h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #ECF0F1; /* Light color for the name */
+            margin-bottom: 1rem;
+        }
+
+        #home p {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #home .contact-info {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        #home .contact-info a {
+            color: #3498DB;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        #home .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* About Section */
+        #about {
+            padding: 4rem 2rem;
+            background: #ffffff;
+            text-align: center;
+        }
+
+        #about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #2C3E50;
+        }
+
+        #about p {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #7F8C8D;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Skills Section */
+        #skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            background: #ECF0F1;
+            padding: 2rem;
+        }
+
+        .skill-card {
+            background: #ffffff;
+            border-radius: 10px;
+            margin: 1rem;
+            padding: 2rem;
+            width: 250px;
+            height: 250px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: scale(1.05);
+        }
+
+        .skill-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            color: #2C3E50;
+        }
+
+        .skill-card p {
+            font-size: 1rem;
+            color: #7F8C8D;
+        }
+
+        /* Projects Section */
+        #projects {
+            padding: 4rem 2rem;
+            background: #ffffff;
+        }
+
+        #projects h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: #2C3E50;
+        }
+
+        .project-card {
+            display: flex;
+            justify-content: center;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .project-card img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card img:hover {
+            transform: scale(1.05);
+        }
+
+        .project-info {
+            max-width: 600px;
+            margin-left: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .project-info h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #2C3E50;
+        }
+
+        .project-info p {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #7F8C8D;
+        }
+
+        /* Internships Section */
+        #internships {
+            padding: 4rem 2rem;
+            background: #f9f9f9;
+        }
+
+        #internships h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: #2C3E50;
+        }
+
+        .internship-card {
+            background: #ffffff;
+            margin: 1.5rem 0;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .internship-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #2C3E50;
+        }
+
+        .internship-card p {
+            font-size: 1.2rem;
+            color: #7F8C8D;
+        }
+
+        /* Contact Section */
+        #contact {
+            padding: 4rem 2rem;
+            background: #2C3E50;
+            color: #ECF0F1;
+            text-align: center;
+        }
+
+        #contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        #contact p {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        #contact a {
+            color: #3498DB;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background: #2C3E50;
+            color: #ECF0F1;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#internships">Internships</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="content">
+            <h1>Kanakamahalakshmi Katepalli</h1>
+            <p>Aspiring AI & Data Science Engineer</p>
+            <div class="contact-info">
+                <p>Email: <a href="mailto:katepallikanakamahalakshmi@gmail.com">katepallikanakamahalakshmi@gmail.com</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/kanaka-mahalakshmi-katepalli-637585273/" target="_blank">LinkedIn</a></p>
+                <p>GitHub: <a href="https://github.com/mahalakshmi-00" target="_blank">GitHub</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a recent graduate in Computer Science Engineering with a specialization in Artificial Intelligence and Data Science. I am passionate about solving real-world problems using Python, machine learning, and cloud technologies, With hands-on experience in AI projects and cloud-based solutions, I aim to contribute to innovative tech teams.</p>
+    </section>
+
+<!-- Skills Section -->
+<section id="skills">
+    <h2> Skills </h2>  <!-- Title for the Skills section -->
+    <div class="skill-card">
+        <h3>Python</h3>
+        <p>Skilled in Python programming for AI, data science, and web development.</p>
+    </div>
+    <div class="skill-card">
+        <h3>Machine Learning</h3>
+        <p>Experienced with TensorFlow, Keras, and building models for prediction tasks.</p>
+    </div>
+    <div class="skill-card">
+        <h3>Cloud Computing</h3>
+        <p>Proficient in AWS services like EC2, S3, and deploying machine learning models.</p>
+    </div>
+    <div class="skill-card">
+        <h3>Web Development</h3>
+        <p>Proficient in HTML, CSS, and JavaScript for interactive web elements, games, and web applications.</p>
+    </div>
+</section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Featured Projects</h2>
+        <div class="project-card">
+            <img src="images/hand-gesture-recognition.jpg" alt="Hand Gesture Recognition">
+            <div class="project-info">
+                <h3>Hand Gesture Recognition</h3>
+                <p>Developed using CNNs, OpenCV, and TensorFlow for real-time hand gesture recognition.</p>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="images/health-assistant.jpg" alt="AI Health Assistant">
+            <div class="project-info">
+                <h3>AI Health Assistant</h3>
+                <p>An NLP-powered chatbot that provides health-related advice and personalized recommendations.</p>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="images/memory-card-game.jpg" alt="Memory Card Game">
+            <div class="project-info">
+                <h3>Memory Card Game</h3>
+                <p>Developed an interactive Memory Card Game using JavaScript, HTML, and CSS, focusing on frontend logic and UI design.</p>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="images/task-management.jpg" alt="Real-Time Task Management">
+            <div class="project-info">
+                <h3>Real-Time Task Management</h3>
+                <p>Built a real-time task management application using Node.js, React, and MongoDB for seamless task tracking and collaboration.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Internships Section -->
+    <section id="internships">
+        <h2>Internships</h2>
+        <div class="internship-card">
+            <h3>Salesforce Developer</h3>
+            <p>Worked on customizing Salesforce solutions, automating workflows, and integrating third-party services to improve business processes.</p>
+        </div>
+        <div class="internship-card">
+            <h3>AWS Data Engineering Intern</h3>
+            <p>Worked on building data pipelines, leveraging AWS services like Lambda, S3, and EC2, and optimizing storage and processing for big data tasks.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>If you'd like to get in touch, feel free to reach out via email or LinkedIn.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Kanakamahalakshmi Katepalli

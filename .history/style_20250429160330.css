@@ -1,0 +1,225 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f4f4f4;
+    color: #333;
+}
+
+/* Navigation Bar */
+nav {
+    background: #333;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Home Section */
+#home {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url('images/background.jpg') no-repeat center center/cover;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for text contrast */
+}
+
+#home h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #ff7f50; /* Coral color for the name */
+    margin-bottom: 0.5rem;
+    z-index: 1;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#home p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    z-index: 1;
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+
+#home .contact-info {
+    z-index: 1;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#home .contact-info a {
+    color: #ff7f50; /* Coral color for links */
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+#home .contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* About Section */
+#about {
+    padding: 2rem;
+    background: #fff;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #008080; /* Teal color */
+}
+
+#about p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* Skills Section */
+#skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f4f4;
+    padding: 2rem;
+}
+
+.skill-card {
+    background: #fff;
+    border-radius: 10px;
+    margin: 1rem;
+    padding: 1rem;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.skill-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #800080; /* Purple color */
+}
+
+.skill-card p {
+    font-size: 1rem;
+}
+
+/* Projects Section */
+#projects {
+    padding: 2rem;
+    background: #fff;
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #ff6347; /* Tomato color */
+}
+
+.project-card {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+}
+
+.project-card img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.project-info {
+    max-width: 600px;
+    margin-left: 2rem;
+}
+
+.project-info h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #4682b4; /* Steel Blue color */
+}
+
+.project-info p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* Contact Section */
+#contact {
+    padding: 2rem;
+    background: #333;
+    color: #fff;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ffd700; /* Gold color */
+}
+
+#contact p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+#contact a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
